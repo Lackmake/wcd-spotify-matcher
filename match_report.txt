@@ -1,0 +1,62 @@
+=== World Club Dome 2026 Artist Matching Report ===
+
+--- Friday (6 Matches) ---
+  * Big Tim -> Matched Spotify artist: 'BIG TIM'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Dein ist mein ganzes Herz', 'Alles ist relativ'
+  * DJ SNAKE -> Matched Spotify artist: 'DJ Snake'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Lean On (feat. MØ & DJ Snake)'
+  * Jerome -> Matched Spotify artist: 'Jerome'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Summer Jam - Jerome Remix'
+  * Robin Schulz -> Matched Spotify artist: 'Robin Schulz'
+    Listener Status: Top Artist (medium (6 months), all-time (long-term)); In your Top Tracks; In your Liked Songs
+    Liked songs: 'World Gone Wild (feat. Sam Martin)', 'All the Things She Said', 'All We Got (feat. KIDDO)', 'Alane', 'Shed a Light', 'Unforgettable - Alle Farben Remix', 'Unforgettable - Alle Farben Remix; Extended Version', 'Cola - Robin Schulz Remix', 'I Believe I'm Fine', 'Headlights (feat. Ilsey)', 'Heatwave (feat. Akon)', 'Show Me Love', 'OK'
+  * Toby Romeo -> Matched Spotify artist: 'Toby Romeo'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Where The Lights Are Low - Mike Williams Remix', 'Where The Lights Are Low'
+  * Topic -> Matched Spotify artist: 'Topic'
+    Listener Status: In your Liked Songs
+    Liked songs: 'I Adore You (feat. Daecolm)', 'Why Do You Lie To Me (feat. Lil Baby)'
+
+--- Saturday (6 Matches) ---
+  * Alok -> Matched Spotify artist: 'Alok'
+    Listener Status: Top Artist (recent (4 weeks), medium (6 months), all-time (long-term)); In your Top Tracks; In your Liked Songs
+    Liked songs: 'LET'S GET FKD UP', 'Rapture'
+  * Big Tim -> Matched Spotify artist: 'BIG TIM'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Dein ist mein ganzes Herz', 'Alles ist relativ'
+  * Chapo102 -> Matched Spotify artist: 'Chapo102'
+    Listener Status: In your Top Tracks; In your Liked Songs
+    Liked songs: 'Verknallen (mit Chapo102)', 'Randali'
+  * Eric Prydz -> Matched Spotify artist: 'Eric Prydz'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Opus', 'Midnight City - Eric Prydz Private Remix', 'The Matrix'
+  * James Hype -> Matched Spotify artist: 'James Hype'
+    Listener Status: Top Artist (recent (4 weeks)); In your Liked Songs
+    Liked songs: 'Ferrari'
+  * Oswald -> Matched Spotify artist: 'OSWALD'
+    Listener Status: Top Artist (medium (6 months)); In your Liked Songs
+    Liked songs: 'nachts wach'
+
+--- Sunday (6 Matches) ---
+  * Brandon -> Matched Spotify artist: 'Brando'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Congratulations - Don Diablo VIP Mix', 'Body'
+  * Domiziana -> Matched Spotify artist: 'Domiziana'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Auf die Party'
+  * Kornël -> Matched Spotify artist: 'Körner'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Marie P. - Radio Edit'
+  * Niklas Dee -> Matched Spotify artist: 'Niklas Dee'
+    Listener Status: In your Top Tracks; In your Liked Songs
+    Liked songs: 'Around The World', 'Rhythm Is A Dancer', 'Mädchen auf dem Pferd', 'Not Fair'
+  * Steve Aoki -> Matched Spotify artist: 'Steve Aoki'
+    Listener Status: In your Liked Songs
+    Liked songs: 'Are You Lonely (feat. ISÁK)', 'All Night - Alan Walker Remix', 'Can't Go Home (feat. Adam Lambert) - Radio Edit', 'What We Started'
+  * Swimming Paul -> Matched Spotify artist: 'Swimming Paul'
+    Listener Status: Top Artist (medium (6 months))
+
+Total matched artists across all days: 18
