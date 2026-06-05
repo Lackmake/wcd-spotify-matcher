@@ -168,7 +168,7 @@ def main():
     print("Opening browser for Spotify authentication...")
     
     # Authorize URL
-    scope = "user-library-read user-top-read"
+    scope = "user-library-read user-top-read user-read-recently-played"
     auth_params = {
         "client_id": client_id,
         "response_type": "code",
@@ -211,14 +211,15 @@ def main():
     spotify_data = {} # normalized_name -> details dict
     headers = {"Authorization": f"Bearer {access_token}"}
     
-    def add_artist_info(artist_name, liked_song=None, top_artist_term=None, top_track_song=None):
+    def add_artist_info(artist_name, liked_song=None, top_artist_term=None, top_track_song=None, recent_song=None):
         norm = normalize(artist_name)
         if norm not in spotify_data:
             spotify_data[norm] = {
                 "original_artist": artist_name,
                 "liked_songs": [],
                 "top_artist_terms": [],
-                "top_track_songs": []
+                "top_track_songs": [],
+                "recently_played_songs": []
             }
         
         # Keep the most standard/readable case spelling
@@ -234,6 +235,8 @@ def main():
             spotify_data[norm]["top_artist_terms"].append(top_artist_term)
         if top_track_song and top_track_song not in spotify_data[norm]["top_track_songs"]:
             spotify_data[norm]["top_track_songs"].append(top_track_song)
+        if recent_song and recent_song not in spotify_data[norm]["recently_played_songs"]:
+            spotify_data[norm]["recently_played_songs"].append(recent_song)
 
     # 5.1 Fetch Liked Songs
     liked_url = "https://api.spotify.com/v1/me/tracks?limit=50"
@@ -291,6 +294,21 @@ def main():
                 if artist_name:
                     add_artist_info(artist_name, top_track_song=f"'{track_name}' ({range_names[tr]})")
 
+    print("\nFetching your Spotify Recently Played Tracks...")
+    recent_url = "https://api.spotify.com/v1/me/player/recently-played?limit=50"
+    res = get_url(recent_url, headers)
+    recent_count = 0
+    for item in res.get("items", []):
+        track = item.get("track")
+        if track:
+            track_name = track.get("name")
+            recent_count += 1
+            for artist in track.get("artists", []):
+                artist_name = artist.get("name")
+                if artist_name:
+                    add_artist_info(artist_name, recent_song=track_name)
+    print(f"Completed fetching. Total recently played songs: {recent_count}")
+
     print(f"\nCompleted fetching Spotify profile.")
     print(f"Unique artist names found in your music profile: {len(spotify_data)}")
     
@@ -345,7 +363,8 @@ def main():
                             "matched_spotify_artist": info["original_artist"],
                             "liked_songs": info["liked_songs"],
                             "top_artist_terms": info["top_artist_terms"],
-                            "top_track_songs": info["top_track_songs"]
+                            "top_track_songs": info["top_track_songs"],
+                            "recently_played_songs": info["recently_played_songs"]
                         })
                         
     # 8. Output Results
@@ -385,6 +404,8 @@ def main():
                         indicators.append(f"In your Top Tracks")
                     if match["liked_songs"]:
                         indicators.append(f"In your Liked Songs")
+                    if match.get("recently_played_songs"):
+                        indicators.append(f"Recently Played")
                         
                     context_str = f"    Listener Status: {'; '.join(indicators)}"
                     print(context_str)
@@ -397,7 +418,14 @@ def main():
                         print(songs_str)
                         out.write(songs_str + "\n")
                         
-                    # Print top track details if no liked songs but top tracks exist
+                    # Print recently played songs if any
+                    if match.get("recently_played_songs"):
+                        recent_list = ", ".join([f"'{t}'" for t in match["recently_played_songs"]])
+                        songs_str = f"    Recently played: {recent_list}"
+                        print(songs_str)
+                        out.write(songs_str + "\n")
+                        
+                    # Print top track details if no liked/recent songs but top tracks exist
                     elif match["top_track_songs"]:
                         tracks_list = ", ".join(match["top_track_songs"])
                         songs_str = f"    Top tracks: {tracks_list}"
